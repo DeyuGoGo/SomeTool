@@ -3,7 +3,6 @@ var mkdirp = require('mkdirp');
 
 var args = process.argv.slice(2);
 var sources = ['drawable-hdpi' , 'drawable-mdpi','drawable-xhdpi','drawable-xxhdpi','drawable-xxxhdpi'];
-// /Users/Deyu/githubs/ChuangGu-Android/ChuangGu/messager/src/main/res
 sources.forEach(function (val, index, array) {
   mkdirp(args[1]+'/'+val+'/',function(err){});
   copyFile('./'+val+'/'+args[0],args[1]+'/'+val+'/'+args[0]);
